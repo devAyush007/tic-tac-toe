@@ -61,10 +61,6 @@ function Board() {
 
   return (
     <>
-      <p>Hey, it's {currentPlayer} Turn </p>
-      {winner && <p className="p_">{currentPlayer} LOSS</p>}
-      {winner && winner === "Both" && <p className="p__">Both Won {currentPlayer}</p>}
-      {winner !== "X" && winner !== "O" && <p className="p___">DRAW</p>} {/* New line for DRAW */}
       <div className="grid">
         {Array(9).fill(null).map((_, i) => {
           return (
@@ -79,6 +75,11 @@ function Board() {
           );
         })}
       </div>
+      <p>Hey, it's {currentPlayer} Turn </p>
+      {winner && <p className="p_">{currentPlayer} LOSS</p>}
+      {winner && winner === "Both" && <p className="p__">Both Won {currentPlayer}</p>}
+      {winner && (winner !== "X" && winner !== "O") && <p className="p___">DRAW</p>} 
+    
       <button onClick={reset} className="primary-button">
         RESET
       </button>

@@ -6,7 +6,7 @@ function Square({ value, onClick, winner }: {
   if (!value) {
     return (
       <button className="square" onClick={onClick} disabled={Boolean(winner)}>
-        
+        {null}
         
       </button>
     );
