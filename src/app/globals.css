@@ -1,3 +1,5 @@
+/* Common styles for all devices */
+
 .grid {
    display: grid;
    grid-gap: 2px;
@@ -136,31 +138,37 @@
  
  /* Media query for screens with a maximum width of 767px (mobile) */
  @media (max-width: 767px) {
-   .container {
-     display: flex;
-     flex-direction: column;
+   .grid {
+     grid-template-columns: repeat(2, 1fr); /* Reduce the number of columns to 2 */
    }
  
-   p {
+   p, .p_, .p__, .p___ {
      font-size: 1.5rem; /* Reduce font size for p elements */
      text-align: center; /* Center align the p elements */
-     margin-top: 80% ; /* Add margin to center the p elements vertically */
+     margin-top: 80%; /* Add margin to center the p elements vertically */
    }
  
    .p_ {
-     margin-top: 85% ; /* Adjust margin-top f9r .p_ */
+     margin-top: 85%; /* Adjust margin-top for .p_ */
    }
  
    .p__ {
-     margin-top: 88%; /* Adjust margin-top f9r .p__ */
+     margin-top: 88%; /* Adjust margin-top for .p__ */
    }
  
    .p___ {
-     margin-top: 90% ; /* Adjust margin for .p___ */
+     margin-top: 90%; /* Adjust margin for .p___ */
    }
  
    .primary-button {
      margin: 15% auto; /* Adjust margin for .primary-button */
+   }
+ }
+ 
+ /* Media query for screens with a maximum width of 1023px (tablet) */
+ @media (max-width: 1023px) {
+   .grid {
+     grid-template-columns: repeat(2, 1fr); /* Reduce the number of columns to 2 */
    }
  }
  
