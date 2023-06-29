@@ -62,7 +62,7 @@ function Board() {
   return (
     <>
       <p>Hey, it's {currentPlayer} Turn </p>
-      {winner && <p className="p_">{currentPlayer} WON</p>}
+      {winner && <p className="p_">{currentPlayer} LOSS</p>}
       {winner && winner === "Both" && <p className="p__">Both Won {currentPlayer}</p>}
       {winner !== "X" && winner !== "O" && <p className="p___">DRAW</p>} {/* New line for DRAW */}
       <div className="grid">
